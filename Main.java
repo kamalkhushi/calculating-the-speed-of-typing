@@ -16,7 +16,7 @@ public class Main {
         //string containing list of words
         String[] randomWords = {"Volvo", "BMW", "Ford", "Mazda","Sixpep","Kamal","Khushi","jet","bed","lead","dead","pen","ball"};
         Random obj=new Random();
-        File Obj1 = new File("filename.txt");
+        File Obj1 = new File("G:\\highscore.txt");
         Scanner scan=new Scanner(System.in);
         //limiting the decimal point
         DecimalFormat df = new DecimalFormat("#.####");
@@ -76,7 +76,7 @@ public class Main {
                 {  //Getting highscore
                     try
                     {
-                        File myObj = new File("G:\\filename.txt");
+                        File myObj = new File("G:\\highscore.txt");
                         Scanner myReader = new Scanner(myObj);
                         while (myReader.hasNextLine())
                         {
@@ -101,7 +101,7 @@ public class Main {
                 {//displaying the highscore from the file saved
                     try
                     {
-                        File myObj = new File("G:\\filename.txt");
+                        File myObj = new File("G:\\highscore.txt");
                         Scanner myReader = new Scanner(myObj);
                         while (myReader.hasNextLine())
                         {
@@ -123,8 +123,8 @@ public class Main {
                 {
                     try
                     {
-                        File myObj = new File("G:\\filename.txt");
-                        FileWriter myWriter = new FileWriter("G:\\filename.txt");
+                        File myObj = new File("G:\\highscore.txt");
+                        FileWriter myWriter = new FileWriter("G:\\highscore.txt");
                         //(myobj.createNewFile() This method returns a boolean value true if the file was successfully created, and false if the file already exists
                         if (myObj.createNewFile())
                         {
@@ -140,8 +140,8 @@ public class Main {
                         e.printStackTrace();
                     }
                 }
-                    System.out.println("Saving Score and exiting the application");
-                    break;
+                System.out.println("Saving Score and exiting the application");
+                break;
             }
         }
     }
